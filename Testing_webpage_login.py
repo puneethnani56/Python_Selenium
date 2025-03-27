@@ -1,15 +1,17 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium import webdriver   #webdriver used to control the browser
+from selenium.webdriver.common.by import By    #By used to locate the given web elements 
+from selenium.webdriver.support.ui import WebDriverWait  #Used for waiting until an element is available/loaded
+from selenium.webdriver.support import expected_conditions as EC    #Expected conditions (EC) Contains conditions like element visibility, clickability, etc.
 
 # Launch browser
 driver_chrome = webdriver.Chrome()
 driver_chrome.get("https://opensource-demo.orangehrmlive.com/")
 
 # Explicit wait for username field
-wait = WebDriverWait(driver_chrome, 10)
+wait = WebDriverWait(driver_chrome, 5)
 username_field = wait.until(EC.presence_of_element_located((By.NAME, "username")))
+#checking if the element is available or not and max time to wait is 5 sec
+#DOM - Document Object Model is a structural representation of a HTML page.
 
 # Enter credentials
 username_field.send_keys("Admin")
