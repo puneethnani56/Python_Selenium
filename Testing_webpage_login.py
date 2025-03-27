@@ -1,7 +1,15 @@
-from selenium import webdriver   #webdriver used to control the browser
-from selenium.webdriver.common.by import By    #By used to locate the given web elements 
-from selenium.webdriver.support.ui import WebDriverWait  #Used for waiting until an element is available/loaded
-from selenium.webdriver.support import expected_conditions as EC    #Expected conditions (EC) Contains conditions like element visibility, clickability, etc.
+from selenium import webdriver  
+#webdriver used to control the browser
+from selenium.webdriver.common.by import By   
+#By used to locate the given web elements 
+from selenium.webdriver.support.ui import WebDriverWait  
+#Used for waiting until an element is available/loaded
+from selenium.webdriver.support import expected_conditions as EC    
+#Expected conditions (EC) Contains conditions like element visibility, clickability, etc.
+
+#if u need to externally specify the path of the browser driver then u need to use
+#service_obj=Service("/path/boweser_driver")
+#driver_chrome=webdriver.Chrome(service_obj)
 
 # Launch browser
 driver_chrome = webdriver.Chrome()
