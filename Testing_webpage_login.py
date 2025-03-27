@@ -22,9 +22,12 @@ username_field = wait.until(EC.presence_of_element_located((By.NAME, "username")
 #DOM - Document Object Model is a structural representation of a HTML page.
 
 # Enter credentials
+username_field.clear()
 username_field.send_keys("Admin")
-driver_chrome.find_element(By.NAME, "password").send_keys("admin123")
+
+driver_chrome.find_element(By.NAME,"password").clear()
 driver_chrome.find_element_by_name()
+
 # Click the login button
 login_button = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "orangehrm-login-button")))
 login_button.click()
